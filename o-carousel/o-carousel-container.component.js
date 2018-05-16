@@ -6,9 +6,9 @@
  * Licensed under MIT (https://github.com/Orange-OpenSource/ng-boosted/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
-import { Component, Input, Injectable, Inject, ElementRef, Host, OnInit } from '@angular/core';
+import { Component, Input, Injectable, Inject, ElementRef } from '@angular/core';
 import Swiper from 'swiper';
-var OCarouselContainerComponent = /** @class */ (function () {
+var OCarouselContainerComponent = (function () {
     function OCarouselContainerComponent(elementRef) {
         this.elementRef = elementRef;
     }
@@ -24,6 +24,21 @@ var OCarouselContainerComponent = /** @class */ (function () {
         setTimeout(function () {
             _this.swiper.update();
         });
+    };
+    OCarouselContainerComponent.decorators = [
+        { type: Injectable },
+        { type: Component, args: [{
+                    selector: 'o-carousel-container',
+                    template: "<div class=\"swiper-container\">\n    <div class=\"swiper-wrapper\">\n      <ng-content></ng-content>\n    </div>\n    <div class=\"swiper-pagination\"></div>\n    <div class=\"swiper-button-prev\"></div>\n    <div class=\"swiper-button-next\"></div>\n  </div>"
+                },] },
+    ];
+    /** @nocollapse */
+    OCarouselContainerComponent.ctorParameters = function () { return [
+        { type: ElementRef, decorators: [{ type: Inject, args: [ElementRef,] },] },
+    ]; };
+    OCarouselContainerComponent.propDecorators = {
+        "pager": [{ type: Input },],
+        "options": [{ type: Input },],
     };
     return OCarouselContainerComponent;
 }());

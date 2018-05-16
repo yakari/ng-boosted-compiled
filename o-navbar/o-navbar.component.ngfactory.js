@@ -20,10 +20,10 @@ export function View_ONavLink_0(_l) { return i0.ɵvid(0, [i0.ɵqud(402653184, 1,
 export function View_ONavLink_Host_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "li", [["o-nav-link", ""]], [[2, "nav-item", null]], null, null, View_ONavLink_0, RenderType_ONavLink)), i0.ɵdid(1, 311296, null, 0, i3.ONavLink, [], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, function (_ck, _v) { var currVal_0 = i0.ɵnov(_v, 1).route; _ck(_v, 0, 0, currVal_0); }); }
 var ONavLinkNgFactory = i0.ɵccf("li[o-nav-link]", i3.ONavLink, View_ONavLink_Host_0, { route: "route", title: "title" }, {}, ["*"]);
 export { ONavLinkNgFactory as ONavLinkNgFactory };
-var styles_ONavMenu = ["button[_ngcontent-%COMP%] {\n      border: 0;\n      background-color: #000;\n    }\n\n    button[_ngcontent-%COMP%]:hover {\n      cursor: pointer;\n    }"];
+var styles_ONavMenu = ["a[_ngcontent-%COMP%]:hover {\n      cursor: pointer;\n    }"];
 var RenderType_ONavMenu = i0.ɵcrt({ encapsulation: 0, styles: styles_ONavMenu, data: {} });
 export { RenderType_ONavMenu as RenderType_ONavMenu };
-export function View_ONavMenu_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵted(-1, null, ["\n    "])), (_l()(), i0.ɵeld(1, 0, null, null, 2, "button", [["aria-haspopup", "true"], ["class", "nav-link dropdown-toggle"], ["ngbDropdownToggle", ""]], [[1, "title", 0], [1, "aria-expanded", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+export function View_ONavMenu_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵted(-1, null, ["\n    "])), (_l()(), i0.ɵeld(1, 0, null, null, 2, "a", [["aria-haspopup", "true"], ["class", "nav-link dropdown-toggle"], ["ngbDropdownToggle", ""]], [[1, "title", 0], [1, "aria-expanded", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
         var pd_0 = (i0.ɵnov(_v, 2).toggleOpen() !== false);
         ad = (pd_0 && ad);
     } if (("click" === en)) {

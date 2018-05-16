@@ -6,9 +6,9 @@
  * Licensed under MIT (https://github.com/Orange-OpenSource/ng-boosted/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
-import { Component, Injectable, Inject, ElementRef, Host, AfterViewInit } from '@angular/core';
+import { Component, Injectable, Inject, ElementRef, Host } from '@angular/core';
 import { OCarouselContainerComponent } from './o-carousel-container.component';
-var OCarouselComponent = /** @class */ (function () {
+var OCarouselComponent = (function () {
     function OCarouselComponent(elementRef, swiper) {
         this.elm = elementRef.nativeElement;
         this.swiper = swiper;
@@ -17,6 +17,18 @@ var OCarouselComponent = /** @class */ (function () {
         this.elm.classList.add('swiper-slide');
         this.swiper.update();
     };
+    OCarouselComponent.decorators = [
+        { type: Injectable },
+        { type: Component, args: [{
+                    selector: 'o-carousel-slide',
+                    template: '<div><ng-content></ng-content></div>'
+                },] },
+    ];
+    /** @nocollapse */
+    OCarouselComponent.ctorParameters = function () { return [
+        { type: ElementRef, decorators: [{ type: Inject, args: [ElementRef,] },] },
+        { type: OCarouselContainerComponent, decorators: [{ type: Host }, { type: Inject, args: [OCarouselContainerComponent,] },] },
+    ]; };
     return OCarouselComponent;
 }());
 export { OCarouselComponent };
